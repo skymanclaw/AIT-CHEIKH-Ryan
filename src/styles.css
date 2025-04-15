@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+  }
+
+  head {
+    background-color: #ff5722;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }

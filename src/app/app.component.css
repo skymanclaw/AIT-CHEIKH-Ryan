@@ -1,0 +1,220 @@
+/* Général */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+h1, h3 {
+  color: #ffab40;
+}
+
+/* Header */
+header {
+  background-color: #ff5722;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Formulaire */
+form {
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #43a047;
+}
+
+/* Tags de filtre */
+#tags-container {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.tag-button {
+  background-color: #3f51b5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.tag-button:hover {
+  background-color: #303f9f;
+}
+
+/* Notes */
+#notes-container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.note:hover {
+  transform: translateY(-3px);
+}
+
+.note h3 {
+  margin: 0 0 10px;
+  color: #ffab40;
+}
+
+.note p {
+  margin: 0 0 10px;
+  color: #ddd;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  float: right;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
+
+
+/* Notes en grille */
+#notes-container {
+  width: 100%;
+  max-width: 1000px;  
+  display: grid;      
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px;          
+  padding: 20px;      
+}
+
+.note {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.note h3 {
+  margin: 0 0 10px;
+  color: #ffab40;
+}
+
+.note p {
+  margin: 0 0 10px;
+  color: #ddd;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  float: right;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}

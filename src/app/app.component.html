@@ -1,0 +1,78 @@
+<div class="container">
+  <h1>Mes Notes</h1>
+
+  <!-- le form pr ajouter ou modifier une note -->
+  <form (ngSubmit)="submitNote()">
+    <!-- champ pr le titre -->
+    <input
+      type="text"
+      [(ngModel)]="title"
+      name="title"
+      placeholder="Titre de la note"
+      required
+    />
+
+    <!-- zone de texte pr le contenu -->
+    <textarea
+      [(ngModel)]="content"
+      name="content"
+      placeholder="Contenu de la note"
+    ></textarea>
+
+    <!-- champ pr les tags séparés par virgule -->
+    <input
+      type="text"
+      [(ngModel)]="tagsInput"
+      name="tags"
+      placeholder="Tags (séparés par des virgules)"
+    />
+
+    <!-- bouton pr valider (ajouter ou modifier selon le cas) -->
+    <button type="submit">
+      {{ selectedNoteId !== null ? 'Modifier' : 'Ajouter' }} la note
+    </button>
+  </form>
+
+  <!-- Partie pr filtrer les notes avec les tags -->
+  <div id="tags-container">
+    <h3>Filtrer par tags</h3>
+
+    <!-- bouton pr tout afficher (pas de filtre) -->
+    <button class="tag-button" (click)="showAllNotes()">Tous les tags</button>
+
+    <!-- liste des tags qu’on a (auto généré) -->
+    <button
+      *ngFor="let tag of tags"
+      class="tag-button"
+      (click)="selectTag(tag)"
+    >
+      {{ tag }}
+    </button>
+  </div>
+
+  <!-- les notes affichées ici -->
+  <div id="notes-container">
+    <!-- si ya aucune note à montrer -->
+    <div *ngIf="filteredNotes.length === 0">
+      <p>Aucune note avec ce tag.</p>
+    </div>
+
+    <!-- boucle pr afficher chaque note -->
+    <div *ngFor="let note of filteredNotes" class="note">
+      <!-- titre -->
+      <h3>{{ note.title }}</h3>
+
+      <!-- contenu -->
+      <p>{{ note.content }}</p>
+
+      <!-- tags de la note -->
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of note.tags">{{ tag }}</span>
+      </div>
+
+      <!-- boutons pr éditer ou supprimer -->
+      <button (click)="editNote(note)">✏️ Modifier</button>
+      <button (click)="deleteNote(note.id)">🗑 Supprimer</button>
+    </div>
+  </div>
+</div>
